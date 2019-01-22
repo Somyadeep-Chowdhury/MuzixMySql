@@ -17,11 +17,11 @@ import javax.persistence.Id;
 //@Document(collection = "Tracks")
 @Entity
 @Data
-//@NoArgsConstructor//without @setter & @getter, @Data can be applied due to lombok(this takes setter, getter as default
+@NoArgsConstructor//without @setter & @getter, @Data can be applied due to lombok(this takes setter, getter as default
 public class Track {
 
     @Id
-   // @GeneratedValue(strategy = GenerationType.AUTO)//table primary key annotation
+   //@GeneratedValue(strategy = GenerationType.AUTO)//table primary key annotation
     private int trackId;                                               //@ApiModelProperty(notes = "unique ID")          //swagger documentation
 
 
@@ -30,7 +30,7 @@ public class Track {
     @ApiModelProperty(notes = "comment")        //swagger documentation
     private String comment;
 
-    /*public Track(String trackName, String comment) {
+    /* public Track(String trackName, String comment) {
         this.trackName = trackName;
         this.comment = comment;
     }*/

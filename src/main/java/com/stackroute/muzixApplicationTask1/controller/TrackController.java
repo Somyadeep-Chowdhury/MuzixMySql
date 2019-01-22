@@ -40,7 +40,7 @@ public class TrackController {
 //        }catch (Exception ex){
 //            responseEntity=new ResponseEntity<String>(ex.getMessage(),HttpStatus.CONFLICT);
 //        }
-        return new ResponseEntity<Track>(trackService.saveTrack(track),HttpStatus.OK);
+        return new ResponseEntity<Track>(trackService.saveTrack(track),HttpStatus.CREATED);
     }
     @DeleteMapping("deleteTrack/{trackId}")
     @ApiOperation(value = "delete tracks")
